@@ -1,9 +1,9 @@
-# disco-floor-sample-app react-vite-mobx-typescript
+# spotyfy-react-typescript-express
 
 ## Use git clone.
 
 ```
-git clone https://github.com/jaman7/react-vite-mobx-typescript-disco-floor-sample-app.git
+git clone https://github.com/jaman7/spotyfy-react-typescript-express.git
 ```
 
 ## install
@@ -17,5 +17,3 @@ npm install
 ```
 npm run dev
 ```
-
-"# react-vite-mobx-typescript-disco-floor-sample-app"
