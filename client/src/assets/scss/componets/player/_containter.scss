@@ -1,0 +1,19 @@
+.footer {
+  width: 100%;
+  background-color: $colorVeryDarkGray;
+  border-top: 1px solid darken($colorVeryDarkGray, 4%);
+  display: flex;
+  user-select: none;
+  height: 90px;
+  max-height: 90px;
+
+  .now-playing {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 16px;
+    width: 100%;
+    height: 90px;
+  }
+}

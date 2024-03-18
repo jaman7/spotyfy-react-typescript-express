@@ -1,0 +1,22 @@
+.song-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 14px 0 0;
+  flex-basis: 30%;
+
+  @include mediaa(maxsm) {
+    flex-basis: 20%;
+  }
+
+  & p {
+    font-size: 14px;
+    color: $colorWhite;
+    text-align: left;
+    margin-bottom: 0.5rem;
+
+    @include mediaa(maxsm) {
+      font-size: 12px;
+    }
+  }
+}

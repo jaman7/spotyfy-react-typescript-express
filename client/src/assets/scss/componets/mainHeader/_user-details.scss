@@ -1,0 +1,14 @@
+.user-details {
+  display: flex;
+  align-items: center;
+
+  & .user-image {
+    max-height: 35px;
+    padding: 0.25rem;
+    margin-right: 0.2rem;
+  }
+
+  & p {
+    margin-bottom: 0;
+  }
+}

@@ -1,0 +1,90 @@
+.dasboard {
+  display: flex;
+  flex-direction: column;
+  transition: all 0.5s ease;
+  background-color: $dark-bg;
+  height: 100vh;
+  max-height: 100vh;
+  overflow: hidden;
+
+  &__view {
+    display: flex;
+    width: 100%;
+    height: calc(100vh - 90px);
+    max-height: calc(100vh - 90px);
+  }
+
+  & .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+    @include padding(1rem);
+
+    @include mediaa(maxsm) {
+      @include padding(1rem);
+    }
+  }
+
+  & .content {
+    padding: 0 16px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: calc(100vh - 90px);
+    max-height: calc(100vh - 90px);
+  }
+}
+
+.scroll,
+.scroll-2 {
+  position: relative;
+  overflow: hidden auto;
+  display: flex;
+  flex-direction: column;
+  max-height: 40vh;
+  width: 100%;
+
+  @include mediaa(maxsm) {
+    overflow: hidden;
+    width: 100%;
+    max-width: none;
+  }
+
+  &-2 {
+    max-height: 30vh;
+  }
+}
+
+.lazyload,
+.lazyloading {
+  opacity: 0;
+  transform: scale(0.8);
+}
+
+.lazyloaded {
+  opacity: 1;
+  transition: all 200ms;
+  transform: scale(1);
+}
+
+.fade-enter div {
+  overflow-y: hidden;
+  max-height: 0;
+}
+
+.fade-enter-active div {
+  max-height: 50px;
+  transition: all 500ms ease-in;
+}
+
+.fade-exit div {
+  max-height: 50px;
+}
+
+.fade-exit-active div {
+  max-height: 0;
+  overflow-y: hidden;
+  transition: all 500ms ease-in;
+}

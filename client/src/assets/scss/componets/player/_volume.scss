@@ -1,0 +1,73 @@
+.volume-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  flex-basis: 30%;
+
+  @include mediaa(maxsm) {
+    flex-basis: 20%;
+  }
+
+  & .volume {
+    appearance: none;
+    width: 120px;
+    height: 5px;
+    background-color: $colorDarkenGray;
+    border-radius: 4px;
+    outline: none;
+    opacity: 1;
+    transition:
+      opacity 150ms ease-in-out,
+      background-color 150ms ease-in-out;
+
+    &:hover {
+      opacity: 0.8;
+      background-color: $colorGray;
+    }
+  }
+
+  & input[type="range"] {
+    appearance: none;
+    width: 120px;
+    height: 5px;
+    background-color: $colorlimeGreen;
+    border-radius: 4px;
+    outline: none;
+    opacity: 1;
+    transition:
+      opacity 150ms ease-in-out,
+      background-color 150ms ease-in-out;
+
+    @include mediaa(maxsm) {
+      width: 100%;
+    }
+
+    &:hover {
+      opacity: 0.8;
+      background-color: darken($colorlimeGreen, 5%);
+    }
+
+    &::-moz-range-track {
+      width: 120px;
+      height: 5px;
+      background-color: $colorlimeGreen;
+      border-radius: 4px;
+      outline: none;
+      opacity: 1;
+    }
+
+    &::-webkit-slider-thumb {
+      appearance: none;
+      width: 12px;
+      height: 12px;
+      background: $colorWhite;
+      cursor: pointer;
+      border-radius: 50%;
+    }
+  }
+
+  & .fa-volume-up {
+    margin-right: 5px;
+  }
+}

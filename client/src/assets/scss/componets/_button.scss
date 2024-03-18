@@ -1,0 +1,20 @@
+.pause-play-btn {
+  background: $colorlimeGreen;
+  color: $colorWhite;
+  border: 0;
+  border-radius: 2em;
+  padding: 0.5rem 2rem;
+  font-size: 14px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  outline: none;
+  font-weight: 600;
+  transition: all 200ms ease-in-out;
+
+  &:hover,
+  &:focus {
+    color: $colorWhite;
+    opacity: 0.8;
+    outline: 0;
+  }
+}

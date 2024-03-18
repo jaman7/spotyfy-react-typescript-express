@@ -1,0 +1,155 @@
+$breakpoint: 750px;
+$heading-color: $colorGray;
+
+.table-view {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  box-shadow: 0 0 40px darken($colorVeryDarkGray, 5%);
+
+  & .cln {
+    width: 25%;
+  }
+
+  & .cmn {
+    width: calc(25% - 58px);
+  }
+
+  & .csn {
+    width: 3%;
+  }
+
+  & .csn1 {
+    width: 30px;
+  }
+
+  & .csn2 {
+    width: 28px;
+  }
+
+  & .column-heading {
+    & p {
+      margin: 0;
+      padding: 0 8px;
+      color: #ccc;
+      text-transform: uppercase;
+      font-size: 16px;
+    }
+  }
+
+  &-row {
+    width: 100%;
+    height: max-content;
+    display: flex;
+    margin-top: 20px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid $colorGray;
+  }
+
+  &-cell {
+    background-color: inherit;
+
+    & p {
+      background-color: inherit;
+      margin-bottom: 0;
+    }
+  }
+
+  & .item {
+    border-bottom: 1px solid $colorGray;
+    cursor: pointer;
+    margin: 0;
+    padding-bottom: 0;
+    color: $colorWhite;
+    transition: all 150ms ease-in-out;
+
+    &:hover {
+      background-color: $colorVeryDarkGray;
+
+      & .play-song {
+        opacity: 1;
+      }
+    }
+
+    &.active {
+      background-color: $colorVeryDarkGray;
+
+      & .play-song {
+        opacity: 1;
+      }
+    }
+
+    & p {
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      margin: 0;
+      padding: 0.8rem 8px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+
+      @include fluid-type(12px, 14px);
+
+      @include mediaa(maxsm) {
+        padding: 0.5rem 8px;
+      }
+
+      &.with-icons {
+        display: flex;
+        justify-content: space-between;
+
+        & span {
+          font-size: 19px;
+          color: $colorGray;
+          line-height: 1;
+          cursor: pointer;
+
+          &:hover {
+            color: $colorWhite;
+          }
+        }
+      }
+    }
+
+    & .play-song {
+      width: 30px;
+      opacity: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      & i {
+        font-size: 25px;
+        color: $colorGray;
+        cursor: pointer;
+
+        &:hover {
+          color: $colorWhite;
+        }
+      }
+    }
+
+    & .add-song {
+      cursor: pointer;
+      z-index: 1;
+      width: 28px;
+      color: $colorWhite;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      & i {
+        font-size: 20px;
+      }
+    }
+  }
+
+  & .table-view-cell {
+    overflow: hidden;
+    list-style: none;
+  }
+
+  & .simplebar-placeholder {
+    width: auto !important;
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "menu": {
+    "browse": "Przeglądaj",
+    "recentlyPlayed": "Teraz odtwarzane",
+    "tracks": "Utwory",
+    "albums": "Albumy",
+    "artists": "Artyści",
+    "myPlaylist": "Moja playlista",
+    "myAlbums": "Moje albumy"
+  }
+}

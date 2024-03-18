@@ -1,0 +1,27 @@
+.track-search-container {
+  & input {
+    background-color: $colorWhite;
+    width: auto;
+    border-radius: 10px;
+    border: 0;
+    padding: 4px 4px 4px 10px;
+    outline: none;
+
+    @include mediaa(maxmd) {
+      max-width: 150px;
+    }
+  }
+
+  & button {
+    background: none;
+    border: 0;
+    outline: none;
+  }
+
+  & .search {
+    margin-left: 5px;
+    cursor: pointer;
+    color: $colorWhite;
+    font-size: 15px;
+  }
+}
